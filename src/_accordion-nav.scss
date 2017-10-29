@@ -1,0 +1,49 @@
+@mixin elr-accordion-nav($config: ()) {
+    $config: extend((
+        color: transparent,
+        icon: true
+    ), $config);
+
+    $color: map-get($config, color);
+    $icon: map-get($config, icon);
+
+    background-color: $color;
+
+    @if $icon {
+        .elr-accordion-icon {
+            font-size: to-rems(14px);
+            transform: rotate(-90deg);
+            line-height: 1;
+            position: absolute;
+            left: to-rems(10px);
+            top: to-rems(8px);
+            color: $white;
+            transition: transform .3s ease-in-out;
+        }
+    }
+
+    .elr-accordion-nav-label {
+        font-weight: $bold;
+        position: relative;
+
+        @if $icon {
+            padding-left: to-rems(25px);
+
+            &.active {
+                .elr-accordion-icon {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+
+    .elr-accordion-nav-inner {
+        @include elr-slide;
+        padding: 0;
+
+        a {
+            font-size: to-rems(13px);
+            padding-left: to-rems(30px);
+        }
+    }
+}
