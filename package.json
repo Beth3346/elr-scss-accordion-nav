@@ -1,13 +1,14 @@
 {
   "name": "elr-scss-accordion-nav",
   "description": "a scss mixin for accordion navs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Elizabeth Rogers",
   "bugs": {
     "url": "https://github.com/Beth3346/elr-scss-accordion-nav",
     "email": "beth3346@gmail.com"
   },
   "devDependencies": {
+    "elr-scss-functions": "0.0.2",
     "gulp": "^3.9.1",
     "gulp-scss-lint": "^0.4.0",
     "husky": "^0.14.3",
@@ -25,8 +26,5 @@
   },
   "scripts": {
     "precommit": "gulp"
-  },
-  "dependencies": {
-    "elr-scss-functions": "0.0.2"
   }
 }
