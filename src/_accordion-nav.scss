@@ -17,13 +17,13 @@
             position: absolute;
             left: to-rems(10px);
             top: to-rems(8px);
-            color: $white;
+            color: #fff;
             transition: transform .3s ease-in-out;
         }
     }
 
     .elr-accordion-nav-label {
-        font-weight: $bold;
+        font-weight: 700;
         position: relative;
 
         @if $icon {
