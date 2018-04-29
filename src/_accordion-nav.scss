@@ -32,6 +32,7 @@
   .elr-accordion-menu-inner li {
     margin: 0;
     padding: 0;
+    list-style: none;
   }
 
   .elr-accordion-menu-inner {
@@ -40,20 +41,17 @@
   }
 
   .elr-accordion-menu-label,
-  .elr-menu-inner-item {
-    list-style: none;
+  .elr-accordion-inner-item a {
+    display: block;
+    text-decoration: none;
+    color: $text-color;
+    background-color: $color;
+    padding: 5px 10px;
+    margin: 0;
+    text-decoration: none;
 
-    a {
-      display: block;
-      text-decoration: none;
-      color: $text-color;
-      background-color: $color;
-      padding: 5px 10px;
-      margin: 0;
-
-      &:hover {
-        background-color: lighten($color, 10%);
-      }
+    &:hover {
+      background-color: lighten($color, 10%);
     }
   }
 
@@ -63,7 +61,7 @@
     font-size: 14px;
 
     @if $icon {
-      padding-left: to-rems(25px);
+      // padding-left: to-rems(25px);
 
       &.active {
         .elr-accordion-icon {
@@ -73,8 +71,10 @@
     }
   }
 
-  .elr-menu-inner-item a {
+  .elr-accordion-inner-item a {
     font-size: to-rems(13px);
     padding-left: to-rems(30px);
+    // color: $text-color;
+    // display: block;
   }
 }
