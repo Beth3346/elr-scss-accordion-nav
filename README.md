@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Beth3346/elr-scss-accordion-nav.svg?branch=master)](https://travis-ci.org/Beth3346/elr-scss-accordion-nav)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm](https://img.shields.io/npm/dm/elr-scss-accordion-nav.svg?style=flat)]()
+[![npm](https://img.shields.io/npm/dm/elr-scss-accordion-nav.svg?style=flat)]() [![Greenkeeper badge](https://badges.greenkeeper.io/Beth3346/elr-scss-accordion-nav.svg)](https://greenkeeper.io/)
 
 a library of sass mixins
 
