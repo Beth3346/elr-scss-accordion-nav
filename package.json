@@ -7,22 +7,23 @@
     "url": "https://github.com/Beth3346/elr-scss-accordion-nav",
     "email": "beth3346@gmail.com"
   },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.6.1",
-    "babel-register": "^6.26.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-babel": "^7.0.1",
-    "gulp-clean-css": "^3.9.3",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-scss-lint": "^0.6.1",
-    "husky": "^1.0.0-rc.2",
-    "node-sass": "^4.5.0",
-    "path": "^0.12.7"
+  "scripts": {
+    "build": "gulp clean && gulp",
+    "prepare": "husky install",
+    "test": "gulp clean && gulp"
   },
-  "homepage": "http://www.elizabeth-rogers.com/elr-utilities/css.html",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.0.0",
+    "husky": "^7.0.4",
+    "path": "^0.12.7",
+    "sass": "^1.43.4"
+  },
+  "homepage": "https://github.com/Beth3346/elr-scss-accordion-nav",
   "keywords": [
     "sass, css, mixins, accordion, navigation"
   ],
@@ -33,14 +34,8 @@
     "url": "https://github.com/Beth3346/elr-scss-accordion-nav.git"
   },
   "dependencies": {
-    "babel-runtime": "^6.26.0",
-    "elr-scss-animations": "0.0.1",
-    "elr-scss-functions": "0.1.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "gulp"
-    }
+    "elr-scss-animations": "0.0.8",
+    "elr-scss-functions": "1.1.6"
   },
   "resolutions": {
     "natives": "1.1.3"
