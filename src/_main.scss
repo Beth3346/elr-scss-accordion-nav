@@ -45,6 +45,11 @@
     padding: 0;
     margin: 0;
     // background-color: lightgreen;
+
+    &.active {
+      border-top: 1px solid $hover-color;
+      margin-top: 4px;
+    }
   }
 
   .elr-accordion-menu-label,
@@ -53,14 +58,14 @@
     text-decoration: none;
     color: $text-color;
     background-color: $background-color;
-    padding: 4px 8px;
+    padding: 8px;
+    line-height: 1;
     margin: 0;
     text-decoration: none;
     border-radius: $border-radius;
     font-weight: 900;
 
-    &:hover,
-    &.active {
+    &:hover {
       background-color: $hover-color;
       color: $background-color;
 
@@ -79,12 +84,12 @@
 
     a {
       font-size: 14px;
-      margin: 8px 0;
+      margin: 4px 0;
     }
   }
 
   .elr-accordion-menu-label {
-    font-weight: 700;
+    font-weight: 900;
     position: relative;
     font-size: 16px;
     display: flex;
@@ -97,13 +102,13 @@
     background-color: $background-color;
 
     &.active {
-      background-color: $hover-color;
-      color: $background-color;
+      // background-color: $hover-color;
+      // color: $background-color;
 
       @if $icon {
         // padding-left: to-rems(25px);
         .elr-accordion-icon {
-          color: $background-color;
+          // color: $background-color;
           transform: rotate(0deg);
         }
       }
