@@ -3,6 +3,16 @@
 
 @include elr-reset;
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+  width: 100%;
+}
+
 .wrapper {
   max-width: 1000px;
   margin: auto;
@@ -34,3 +44,28 @@
 .accordion-nav {
   @include elr-accordion-nav;
 }
+
+// TODO: nav with transparent background
+
+.accordion-nav-transparent {
+  @include elr-accordion-nav(
+    $config: (
+      // border-radius: 0,
+      background-color: transparent,
+      text-color: #1976d2,
+      active-color: transparent,
+    )
+  );
+}
+
+// TODO: nav with no border radius
+
+.accordion-nav-bdrs-0 {
+  @include elr-accordion-nav(
+    $config: (
+      border-radius: 0,
+    )
+  );
+}
+
+// TODO: no padding

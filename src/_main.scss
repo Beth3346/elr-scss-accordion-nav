@@ -5,9 +5,7 @@
   $config: extend(
     (
       background-color: #1976d2,
-      hover-color: #acd2f8,
-      icon: true,
-      width: 250px,
+      active-color: #fff,
       text-color: #fff,
       border-radius: 5px,
     ),
@@ -15,13 +13,11 @@
   );
 
   $background-color: map-get($config, background-color);
-  $hover-color: map-get($config, hover-color);
-  $icon: map-get($config, icon);
-  $width: map-get($config, width);
+  $active-color: map-get($config, active-color);
   $border-radius: map-get($config, border-radius);
   $text-color: map-get($config, text-color);
 
-  max-width: $width;
+  width: 100%;
   background-color: $background-color;
   border-radius: $border-radius;
   overflow: hidden;
@@ -40,18 +36,6 @@
     margin: 8px 0;
   }
 
-  .elr-accordion-menu-inner {
-    @include elr-slide;
-    padding: 0;
-    margin: 0;
-    // background-color: lightgreen;
-
-    &.active {
-      border-top: 1px solid $hover-color;
-      margin-top: 4px;
-    }
-  }
-
   .elr-accordion-menu-label,
   .elr-accordion-inner-item a {
     display: block;
@@ -65,26 +49,24 @@
     border-radius: $border-radius;
     font-weight: 900;
 
-    &:hover {
-      background-color: $hover-color;
-      color: $background-color;
+    @if ($background-color != transparent) {
+      &:hover {
+        background-color: $active-color;
+        color: $background-color;
 
-      @if $icon {
         .elr-accordion-icon {
           color: $background-color;
         }
       }
-    }
-  }
+    } @else {
+      &:hover {
+        background-color: $text-color;
+        color: #fff;
 
-  .elr-accordion-inner-item {
-    &:last-child a {
-      margin-bottom: 0;
-    }
-
-    a {
-      font-size: 14px;
-      margin: 4px 0;
+        .elr-accordion-icon {
+          color: #fff;
+        }
+      }
     }
   }
 
@@ -102,28 +84,48 @@
     background-color: $background-color;
 
     &.active {
-      // background-color: $hover-color;
-      // color: $background-color;
-
-      @if $icon {
-        // padding-left: to-rems(25px);
-        .elr-accordion-icon {
-          // color: $background-color;
-          transform: rotate(0deg);
-        }
+      .elr-accordion-icon {
+        transform: rotate(0deg);
       }
     }
   }
 
-  @if $icon {
-    .elr-accordion-icon {
-      font-size: to-rems(14px);
-      line-height: 1;
-      display: inline-block;
-      position: relative;
-      color: $text-color;
-      transform: rotate(-90deg);
-      transition: transform 0.3s ease-in-out;
+  .elr-accordion-icon {
+    font-size: to-rems(14px);
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    color: $text-color;
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .elr-accordion-menu-inner {
+    @include elr-slide;
+    padding: 0;
+    margin: 0;
+    // background-color: lightgreen;
+
+    &.active {
+      margin-top: 8px;
+      padding-top: 4px;
+
+      @if ($background-color != transparent) {
+        border-top: 1px solid $active-color;
+      } @else {
+        border-top: 1px solid $text-color;
+      }
+    }
+  }
+
+  .elr-accordion-inner-item {
+    &:last-child a {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-size: 14px;
+      margin: 4px 0;
     }
   }
 }
