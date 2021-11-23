@@ -41,9 +41,16 @@
   },
   "np": {
     "yarn": false,
-    "branch": "main"
+    "branch": "main",
+    "tests": false,
+    "contents": "src"
   },
   "browserslist": [
     "last 3 versions"
-  ]
+  ],
+  "sass": {
+    "includePaths": [
+      "./node_modules"
+    ]
+  }
 }
