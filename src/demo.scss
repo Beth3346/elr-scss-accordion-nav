@@ -1,45 +1,38 @@
-@import "src/main";
 @import "elr-scss-reset/src/main";
 @import "elr-scss-config/src/main";
+@import "elr-scss-base/src/main";
+@import "src/main";
 
 @include elr-reset;
+@include elr-base;
 
 * {
   font-family: Roboto;
 }
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: $border;
-  margin: 1em 0;
-  padding: 0;
-  width: 100%;
-}
-
 .wrapper {
-  max-width: 1000px;
+  max-width: $content-width;
   margin: auto;
   padding: ($base-fontsize * 1.5);
+}
+
+.main-heading,
+.subheading {
+  border-bottom: $border;
+  padding-bottom: $base-fontsize * 0.5;
+  margin-bottom: $base-fontsize;
+  width: 100%;
 }
 
 .main-heading {
   font-size: $base-fontsize * 2;
   font-weight: 700;
-  border-bottom: $border;
-  padding-bottom: $base-fontsize * 0.5;
-  margin-bottom: $base-fontsize;
-  width: 100%;
 }
 
 .subheading {
-  font-size: $base-fontsize * 1.25;
+  font-size: $base-fontsize * 1.5;
+  font-weight: 900;
   color: $primary-color;
-  border-bottom: $border;
-  padding-bottom: $base-fontsize * 0.5;
-  margin-bottom: $base-fontsize;
-  width: 100%;
 }
 
 .demo-content {
@@ -58,7 +51,7 @@ hr {
   @include elr-accordion-nav(
     $config: (
       background-color: transparent,
-      text-color: #1976d2,
+      text-color: $secondary-color,
       active-color: transparent,
     )
   );
@@ -74,4 +67,4 @@ hr {
   );
 }
 
-// TODO: no padding
+// TODO: no padding just solid background and compact
