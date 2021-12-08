@@ -4,6 +4,8 @@
 [![CI](https://github.com/Beth3346/elr-scss-accordion-nav/actions/workflows/node.js.yml/badge.svg)](https://github.com/Beth3346/elr-scss-accordion-nav/actions/workflows/node.js.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-accordion-nav.svg?style=flat)](https://npmjs.com/package/elr-scss-accordion-nav)
+[![last commit](https://img.shields.io/github/last-commit/Beth3346/elr-scss-accordion-nav.svg)](https://github.com/Beth3346/elr-scss-accordion-nav)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0dd5c542-ce15-4469-95a2-524f1eaff06e/deploy-status)](https://app.netlify.com/sites/elr-accordion-nav/deploys)
 
 a library of sass mixins
 
