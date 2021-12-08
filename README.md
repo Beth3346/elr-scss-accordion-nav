@@ -9,6 +9,8 @@
 
 a library of sass mixins
 
+[View Demo](https://elr-accordion-nav.netlify.app/)
+
 ## Screenshots
 
 ### Default Styles
