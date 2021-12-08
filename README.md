@@ -1,5 +1,7 @@
-# elr-scss-accordion-nav
+# Accordion Navigation
 
+[![npm version](http://img.shields.io/npm/v/elr-scss-accordion-nav.svg)](https://www.npmjs.org/package/elr-scss-accordion-nav)
+[![Build Status](https://github.com/elr-scss-accordion-nav/workflows/CI/badge.svg)](https://github.com/elr-scss-accordion-nav/actions?workflow=CI)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-accordion-nav.svg?style=flat)](https://npmjs.com/package/elr-scss-accordion-nav)
 
@@ -27,12 +29,18 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 npm install elr-scss-accordion-nav --save
 ```
 
+or
+
+```sh
+yarn install elr-scss-accordion-nav
+```
+
 ## Implementation
 
 ### Scss
 
 ```scss
-@import "elr-scss-accordion-nav";
+@import "elr-scss-accordion-nav/src/main";
 
 .accordion-nav {
   @include elr-accordion-nav;
@@ -40,7 +48,7 @@ npm install elr-scss-accordion-nav --save
 ```
 
 ```scss
-@import "elr-scss-accordion-nav";
+@import "elr-scss-accordion-nav/src/main";
 
 .accordion-nav-bdrs-0 {
   @include elr-accordion-nav(
@@ -52,7 +60,7 @@ npm install elr-scss-accordion-nav --save
 ```
 
 ```scss
-@import "elr-scss-accordion-nav";
+@import "elr-scss-accordion-nav/src/main";
 
 .accordion-nav-transparent {
   @include elr-accordion-nav(
