@@ -7,7 +7,7 @@
 [![last commit](https://img.shields.io/github/last-commit/Beth3346/elr-scss-accordion-nav.svg)](https://github.com/Beth3346/elr-scss-accordion-nav)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0dd5c542-ce15-4469-95a2-524f1eaff06e/deploy-status)](https://app.netlify.com/sites/elr-accordion-nav/deploys)
 
-a library of sass mixins
+a library of sass mixins for accordion content.
 
 [View Demo](https://elr-accordion-nav.netlify.app/)
 
